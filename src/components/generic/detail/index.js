@@ -1,10 +1,10 @@
 import React, { Fragment } from 'react';
-import { Switch, Route, withRouter } from 'react-router-dom';
+import { Switch, Route } from 'react-router-dom';
 import PropTypes from 'prop-types';
 
 import { Detail as Layout } from 'components/layout';
 import { Alert } from 'components';
-import { withTabs } from 'components/common/withTabs';
+//import { withTabs } from 'components/common/withTabs';
 import { withI18n } from 'components/common';
 
 import viewDictionary from 'components/generic/view-dict';
@@ -36,25 +36,25 @@ class DetailLayout extends React.Component {
 
   // NOTE: renders either single page or several pages with tabs above
   renderPages = id => {
-    const { config, translate, user } = this.props;
+    const { config, translate } = this.props;
     const { detail: pages } = config;
 
     // NOTE: filter pages py permission
     const filteredPages = pages //.filter(item => !item.permission || user.data.checkPermission(item.permission));
 
-    if (filteredPages.length == 0) return <Alert>{translate('layout.none')}</Alert>;
+    if (filteredPages.length === 0) return <Alert>{translate('layout.none')}</Alert>;
 
     if (filteredPages.length > 1) {
       const uriPrefix = config.routes.prefix;
       // router uri takes `id` as placeholder
       const uriPrefixRouter = `${uriPrefix}/:id`;
       // tabs router takes actual id
-      const uriPrefixTabs = `${uriPrefix}/${id}`;
+      //const uriPrefixTabs = `${uriPrefix}/${id}`;
 
-      const tabs = filteredPages.map(({key, tab}) => {
+      /*const tabs = filteredPages.map(({key, tab}) => {
         if (tab) return { key, tab };
         else return key;
-      });
+      });*/
 
       return (
         <Switch>
@@ -62,8 +62,8 @@ class DetailLayout extends React.Component {
             // TODO: for now page has to be detail (React router does not support array of paths) 
             const uri = `${uriPrefixRouter}/${p.key}`;
 
-            const Grid = this.assembleViews(p.views);
-            const PageWithTabs = withTabs(tabs, config, uriPrefixTabs, i)(Grid);
+            //const Grid = this.assembleViews(p.views);
+            //const PageWithTabs = withTabs(tabs, config, uriPrefixTabs, i)(Grid);
 
             /*const pw = <PageWithTabs
                     {...this.props}

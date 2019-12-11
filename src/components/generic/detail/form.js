@@ -1,9 +1,7 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 
-import { entitySubscribe } from 'components/common/subscribe';
 import FormWrapper, { FormBody } from 'components/form/generator';
-
 
 class Form extends Component {
   render() {

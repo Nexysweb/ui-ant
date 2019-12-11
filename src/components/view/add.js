@@ -1,11 +1,7 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 
-import { entitySubscribe } from 'components/common/subscribe';
-
 import { FormWrapper, FormBody } from 'components/form/generator';
-
-
 
 class Add extends Component {
   handleSuccess = isSuccess => {
@@ -14,7 +10,7 @@ class Add extends Component {
   }
 
   render() {
-    const { data, initData, requestCrud, afterSubmit, onSuccess, elements } = this.props;
+    const { initData, requestCrud, afterSubmit, onSuccess, elements } = this.props;
 
     // TODO: enable use of custom body
 

@@ -4,29 +4,7 @@ import styled from 'styled-components';
 
 import { Link } from 'react-router-dom';
 
-// to remove
-//import { entitySubscribe } from 'components/common/subscribe';
-// drag and dropnto remove
-//import MobileList from './mobile/index';
-//import DraggableRow from './draggable-row';
-//import { DragDropContext } from 'react-dnd';
-//import HTML5Backend from 'react-dnd-html5-backend';
-
-// wrapper: should be able to remove too
-//import { withI18n } from 'components/common';
-//import withConnection from 'components/common/connection-wrapper';
-//import withNotification from 'components/notification/wrapper';
-//import withAdd from './add-wrapper';
-//import withEdit from './edit-wrapper';
-//import withSelection from './selection-wrapper';
-//import { withAggregation } from './aggregation-wrapper';
-//import withOverflow  from './overflow-wrapper';
-//import withCollapse from './collapse-wrapper';
-
-// temp remove
-//import { Standalone as Deletion } from 'components/business/deletion';
-
-// stanard librrary
+// standard librrary
 import { Table, Menu, Dropdown, Pagination } from 'antd';
 
 // use library

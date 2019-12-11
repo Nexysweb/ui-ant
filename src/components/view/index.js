@@ -50,8 +50,8 @@ class ViewIndex extends Component {
       const id = Number(props.match.params.id);
 
       // TODO: urlApi -> apiUri: prefix/id suffices, detail & update can be added in component
-      const urlApi = `${urlApiPrefix}/${id}/detail`;
-      const urlApiUpdate = `${urlApiPrefix}/${id}/update`;
+      //const urlApi = `${urlApiPrefix}/${id}/detail`;
+      //const urlApiUpdate = `${urlApiPrefix}/${id}/update`;
       return (
         <Detail
           {...props}

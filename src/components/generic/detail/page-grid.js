@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 
-import { withI18n } from 'components/common';
+//import { withI18n } from 'components/common';
 import { Grid, GridCell } from 'components/layout/grid';
 
 import CheckPermission from 'components/common/permission-wrapper';
@@ -97,7 +97,7 @@ const toPageGrid = (functionalViews, list=false) => {
         // TODO: => view definition
         if (isNaN(id)) {
           // NOTE: cms - file => need to pass entity too
-          requestCrud = WSReqUtils.bizCrud(name)(id, entity == 'cms' ? entity : null);
+          requestCrud = WSReqUtils.bizCrud(name)(id, entity === 'cms' ? entity : null);
           console.log('h8')
         } else {
           requestCrud = WSReqUtils.classicBizCrud(name)(entity, id);

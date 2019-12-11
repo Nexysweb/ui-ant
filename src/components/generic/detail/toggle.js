@@ -35,7 +35,7 @@ class Toggle extends Component {
 
     const { detail: pages } = config;
     const [detail] = pages;
-    const view = detail.views.find(view => view.key == 'toggle');
+    const view = detail.views.find(view => view.key === 'toggle');
 
     const mainConfig = view.config;
     const { form, rows, mapping } = mainConfig;

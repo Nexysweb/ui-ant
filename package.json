@@ -1,5 +1,7 @@
 {
   "name": "@nexys/ant-helper",
+
+  "license": "MIT",
   "version": "1.0.5",
   "dependencies": {
     "@nexys/digis-i18n": "^0.7.0",
@@ -14,8 +16,6 @@
     "styled-theme": "^0.3.3"
   },
   "devDependencies": {
-    "@storybook/react": "^5.2.1",
-    "antd": "^3.23.4",
     "@babel/cli": "^7.5.5",
     "@babel/core": "^7.5.5",
     "@babel/plugin-proposal-class-properties": "^7.5.5",
@@ -23,6 +23,8 @@
     "@babel/plugin-transform-react-jsx": "^7.3.0",
     "@babel/plugin-transform-runtime": "^7.5.5",
     "@babel/preset-env": "^7.5.5",
+    "@storybook/react": "^5.2.1",
+    "antd": "^3.23.4",
     "babel-jest": "^24.8.0",
     "babel-loader": "^8.0.6",
     "babel-plugin-module-resolver": "^3.2.0",
@@ -34,7 +36,8 @@
   "scripts": {
     "build": "rimraf dist/ && babel src/ --out-dir dist/;",
     "start": "start-storybook -p 6006",
-    "buildStorybook": "build-storybook -s public  -o docs"
+    "buildStorybook": "build-storybook -s public  -o docs",
+    "lint": "eslint src/"
   },
   "main": "dist/index.js",
   "eslintConfig": {

@@ -1,18 +1,14 @@
 import React, { Component, Fragment } from 'react';
 import PropTypes from 'prop-types';
-import { withRouter } from 'react-router-dom';
 
 import { Button, Alert } from 'components';
 import { withI18n } from 'components/common';
-//import withNotification from 'components/notification/wrapper';
-import withConnection from 'components/common/connection-wrapper';
 
 import { run } from '../validation/rule-runner';
 
 import APIService from 'lib/api-service';
 
 import { classicAssociationErrors } from 'utils/business';
-import WSUtils from 'utils/ws';
 
 import NexysUtils from '@nexys/utils';
 import DigisUtils from '@nexys/digis-i18n';
@@ -59,7 +55,7 @@ class FormGeneratorWrapper extends Component {
     const { params: wsParams, data } = json;
     const { action, type } = wsParams;
 
-    const eqAction = action === params.action || params.action === 'update' && action === 'detail';
+    const eqAction = action === params.action || (params.action === 'update' && action === 'detail');
     if (wsParams && eqAction && type === params.type) {
       if(wsParams.isError) {
         this.onError(data, {});
@@ -77,14 +73,6 @@ class FormGeneratorWrapper extends Component {
     const { wsConnection: connection } = this.props;
     connection.removeEventListener('message', this.handleMessage);
   }*/
-
-  componentDidMount() {
-    const { request, wsConnection: connection } = this.props;
-
-    if (request) {
-      const requestWData = request({});
-    }
-  }
 
   componentWillReceiveProps(nextProps) {
     const data = nextProps.data || {};
@@ -148,7 +136,7 @@ class FormGeneratorWrapper extends Component {
 
   handleDeleteChange = ({name, id})=> {
     const { data } = this.state;
-    const values = data[name].filter(item => item.id != id);
+    const values = data[name].filter(item => item.id !== id);
     this.setState({data: {...data, [name]: values}});
   }
 
@@ -174,7 +162,7 @@ class FormGeneratorWrapper extends Component {
     }
     if (!isEmpty(validationErrors)) return;
 
-    const { url, request, handleSubmit, notify, wsConnection: connection, mapping } = this.props;
+    const { url, request, handleSubmit, notify, mapping } = this.props;
 
     const onSuccess = res => {
       this.handleClear();

@@ -1,5 +1,5 @@
 import React, { Component, Fragment } from 'react';
-import { Route, Link, withRouter } from 'react-router-dom';
+import { Route, Link } from 'react-router-dom';
 //import { connect } from 'react-redux';
 
 import { Panel, Icon } from 'components';
@@ -11,7 +11,7 @@ import { withTabs } from 'components/common/withTabs';
 import toPageGrid from '../detail/page-grid';
 
 import viewDictionary from 'components/generic/view-dict';
-import subscribe from 'components/common/subscribe';
+//import subscribe from 'components/common/subscribe';
 
 //import { setPageFilterAction } from '../detail/redux/actions';
 //

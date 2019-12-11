@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 import { Link } from 'react-router-dom';
-import { Alert, Button, Icon } from 'components';
+import { Button, Icon } from 'components';
 
 class LinkButton extends React.Component {
   renderIcon() {
