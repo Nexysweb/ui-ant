@@ -37,7 +37,8 @@
     "build": "rimraf dist/ && babel src/ --out-dir dist/;",
     "start": "start-storybook -p 6006",
     "buildStorybook": "build-storybook -s public  -o docs",
-    "lint": "eslint src/"
+    "lint": "eslint src/",
+    "test": "jest src/"
   },
   "main": "dist/index.js",
   "eslintConfig": {

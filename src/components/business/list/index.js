@@ -10,11 +10,15 @@ import { Table, Menu, Dropdown, Pagination } from 'antd';
 // use library
 import Utils from '@nexys/utils';
 
+import Alert from '../../common/alert';
+import Button from '../../common/button';
+import Icon from '../../common/icon';
+import Loader from '../../common/loader';
+import Status from '../../common/status';
+import Tooltip from '../../common/tooltip';
 
-// ok
-import { Form, Components } from '../../../index';
-const { Button, Icon, Alert, Loader, Status, Tooltip } = Components;
-const { Input, Checkbox } = Form;
+import Input from '../../form/input';
+import Checkbox from '../../form/checkbox';
 
 const DSUtils = Utils.ds;
 

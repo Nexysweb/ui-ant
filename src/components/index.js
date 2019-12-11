@@ -15,24 +15,25 @@ import Confirmation from './common/confirmation';
 import Modal from './common/modal';
 import Switches from './common/switches';
 import Code from './common/code';
-
+import List from './business/list';
 
 export default {
-  Icon,
-  KeyValue,
   Alert,
-  Loader,
+  Badge,
   Button,
-  IconButton,
-  Panel,
   Breadcrumbs,
+  Code,
+  Confirmation,
+  Icon,
+  IconButton,
+  KeyValue,
+  Loader,
+  List,
+  Modal,
+  Panel,
   ProgressBar,
   Tooltip,
-  Badge,
-  Confirmation,
-  Modal,
   Status,
-  Tag,
   Switches,
-  Code
+  Tag
 };
