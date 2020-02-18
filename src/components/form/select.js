@@ -32,7 +32,7 @@ class Select extends Component {
 
   render() {
     // TODO: access ant theme
-    const { disabled, placeholder, value, values, minWidth, clearable, multiple, inline } = this.props;
+    const { name, disabled, placeholder, value, values, minWidth, clearable, multiple, inline } = this.props;
 
     // TODO: allowEmpty?
     let isClearable = true;
@@ -80,17 +80,18 @@ class Select extends Component {
     
     return (
       <MySelect
+        key={`${name}_${valueOption.value}`}
+        classNamePrefix="react-select"
         value={valueOption || null}
-        options={options}
         components={replacedComponents}
         onChange={this.handleChange}
         isDisabled={disabled}
         placeholder={placeholder}
         isClearable={isClearable}
         isMulti={multiple}
+        options={options}
         theme={themeFn}
         minWidth={minWidth}
-        classNamePrefix="react-select"
         inline={inline}
       />
     );
